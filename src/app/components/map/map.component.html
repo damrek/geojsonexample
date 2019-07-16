@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <h1>Country List</h1>
+            <form (ngSubmit)="zoom()" class="form-inline" role="form">
+                <div class="form-group">
+                    <select [(ngModel)]="selectedCountry" (ngModelChange)="onSelectedChange($event)" name="country"
+                        class="form-control mr-1">
+                        <option *ngFor="let country of countries" [ngValue]="country">{{ country.feature.properties.NAME }}</option>
+                    </select>
+                    <button class="btn btn-primary" [disabled]="!selectedCountry" type="submit">Go!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="map" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)">
+</div>
