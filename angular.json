@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cities-population": {
+    "european-countries": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cities-population",
+            "outputPath": "dist/european-countries",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cities-population:build"
+            "browserTarget": "european-countries:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cities-population:build:production"
+              "browserTarget": "european-countries:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cities-population:build"
+            "browserTarget": "european-countries:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cities-population:serve"
+            "devServerTarget": "european-countries:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cities-population:serve:production"
+              "devServerTarget": "european-countries:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "cities-population"
+  "defaultProject": "european-countries"
 }
